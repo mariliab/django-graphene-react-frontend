@@ -101,7 +101,7 @@ function EditForm({data}) {
     }
 
     return <div className="container-small">
-    <h2>Edit Education</h2>
+    <h1 className="mt-0">Edit</h1>
     <form onSubmit={handleSubmit} className="add-form">
     <div className="form-control">
         <label htmlFor="name" className="animated-label">Name of education</label>
@@ -133,7 +133,7 @@ function EditForm({data}) {
             <textarea type="text" name="educationDescription" placeholder="Description" onChange={handleChange} autoComplete="off" value={educationDescription}></textarea>
         </div>
     </div>
-        <button type="submit" className="button-primary">Update</button>
+        <button type="submit" className="button-primary">Save</button>
     </form>
 </div>
 

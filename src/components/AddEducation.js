@@ -69,7 +69,7 @@ export function AddEducation() {
     }
 
 return <div className="container-small">
-            <h2>Add Education</h2>
+            <h1 className="mt-0">Add Education</h1>
             <form onSubmit={handleSubmit} className="add-form">
             <div className="form-control">
                 <label htmlFor="name" className="animated-label">Name of education</label>

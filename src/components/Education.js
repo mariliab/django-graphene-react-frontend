@@ -46,6 +46,10 @@ export function EducationInfo() {
   );
   
   if (loading) return <p>Loading...</p>;
+
+  if (!data) {
+    return <p>No data yet</p>
+  }
    
   return <div><h1 className="mt-0">Utbildningar</h1><div className="education-item-wrapper">{data.educations.map(({ id, name, educationType, educationLength, educationPace, description }) => (
     <Link to={`/education/${id}`} id={id} key={id} className="education-item">
@@ -101,10 +105,12 @@ export function EducationInfoPage() {
           <p className="description">
             {data.educationById.description}
           </p>
+          <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center"}}>
+          <Link to={`/editeducation/${data.educationById.id}`} id={data.educationById.id} key={data.educationById.id} className="link-primary">Edit</Link>
           <form onSubmit={handleSubmit}>
-            <button type="submit">delete</button>
+            <button type="submit" className="button-danger">delete</button>
           </form>
-          <Link to={`/editeducation/${data.educationById.id}`} id={data.educationById.id} key={data.educationById.id}>Edit</Link>
+          </div>
         </div>
     )
 }
