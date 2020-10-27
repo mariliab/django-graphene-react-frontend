@@ -47,7 +47,7 @@ export function EducationInfo() {
   
   if (loading) return <p>Loading...</p>;
    
-  return <div><h1 className="mt-0">Utbildningar</h1><div className="education-item-wrapper">{data.educations.map(({ id, name, educationType, educationLength, educationPace, description }) => (
+  return <div><h1 className="mt-0">Utbildningar!</h1><div className="education-item-wrapper">{data.educations.map(({ id, name, educationType, educationLength, educationPace, description }) => (
     <Link to={`/education/${id}`} id={id} key={id} className="education-item">
         <div>
             <h3>
